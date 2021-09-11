@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h3 class="header">1.Дан код, объяснить результаты:</h3>
+            <p class="box-text">
+                var a = 1, b = 1, c, d;<br>c = ++a; alert(c); // 2<br>
+                <span class="box-result">Ответ: инкремент, увеличивает на единицу и присваивает. И потом
+                    выводит результат.</span>
+            </p>
+            <p class="box-text">
+                d = b++; alert(d); // 1<br>
+                <span class="box-result">Ответ: инкремент, сначала выводит результат, а потом увеличивает на
+                    единицу.</span>
+            </p>
+            <p class="box-text">
+                c = (2+ ++a); alert(c); // 5<br>
+                <span class="box-result">Ответ: инкремент, сначала увеличивает а, а=а+1. А потом уже С с новым значение
+                    а, a=2+(2+1).</span>
+            </p>
+            <p class="box-text">
+                d = (2+ b++); alert(d); // 4<br>
+                <span class="box-result">Ответ: инкремент, сначала выводит,т.е. b=(1+1), c=(2+2)</span>
+            </p>
+            <p class="box-text">
+                alert(a); //3<br>
+                <span class="box-result">Ответ: в предыдущих операциях, a увелилось на две единицы.</span>
+            </p>
+            <p class="box-text">
+                alert(b); //3<br>
+                <span class="box-result">Ответ: в предыдущих операциях, b увелилось на две единицы.</span>
+            </p>
+        </div>
+        <div class="box">
+            <h3 class="header">2. Чему будет равен x в примере ниже?</h3>
+            <p class="box-text">
+                var a = 2;<br>var x = 1 + (a *= 2);<br>
+                <span class="box-result">
+                    Ответ: x= 5, происходит умножение с присваиванием т.е. x=1+(2*2);
+                </span>
+            </p>
+        </div>
+        <div class="box">
+            <h3 class="header">
+                3. Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем
+                написать
+                скрипт, который работает по следующему принципу:
+            </h3>
+            <p class="box-text">
+                если a и b положительные, вывести их разность;<br>
+                если а и b отрицательные, вывести их произведение;<br>
+                если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом.<br>
+                <span class="box-result"> Ответ: Результат см. ниже в script.(Закомментирован.)</span>
+            </p>
+        </div>
+        <div class="box">
+            <h3 class="header">
+                4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод
+                чисел от a до 15. Можно сделать решение двумя способами. Второй способ - использовать рекурсию, можно
+                без switch
+            </h3>
+            <p class="box-text">
+                <span class="box-result"> Ответ: Результат см. ниже в script.(Закомментирован.)</span>
+            </p>
+        </div>
+        <div class="box">
+            <h3 class="header">
+                5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно
+                использовать оператор return.
+            </h3>
+            <p class="box-text">
+                <span class="box-result"> Ответ: Результат см. ниже в script.(Закомментирован.)</span>
+            </p>
+        </div>
+        <div class="box">
+            <h3 class="header">6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2,
+                operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости
+                от переданного значения операции выполнить одну из арифметических операций (использовать функции из
+                пункта 5) и вернуть полученное значение (использовать switch).</h3>
+            <p class="box-text">
+                <span class="box-result"> Ответ: Результат см. ниже в script.(Закомментирован.)</span>
+            </p>
+        </div>
+        <div class="box">
+            <h3 class="header">
+                7. *Сравнить null и 0. Попробуйте объяснить результат.
+            </h3>
+            <p class="box-text">
+                <span class="box-result"> Ответ: Результат см. ниже в script.(Закомментирован.) null - это тип данных в
+                    Javascript, который не определяет значение или несуществующее значение. null может рассматриваться
+                    как преднамеренное отсутствие значения какого-либо объекта. А 0 это число.</span>
+            </p>
+        </div>
+        <div class="box">
+            <h3 class="header">
+                8. *С помощью рекурсии организовать функцию возведения числа в степень. Формат: function power(val,
+                pow), где val – заданное число, pow – степень.
+            </h3>
+            <p class="box-text">
+                <span class="box-result"> Ответ: Результат см. ниже в script.(Закомментирован.)</span>
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    //___________________________________________________________________________________________________________
+    /**
+     *  Это 3 задание.
+     *
+     * **/
+    // var a = parseInt(Math.random() * 15 - 10),
+    //     b = parseInt(Math.random() * 15 - 10);
+    // function isCompair() {
+    //     if (a >= 0 && b >= 0) {
+    //         alert(' Положительные: Первое число: ' + a + ' Второе число: ' + b + ' Результат: ' + (a - b));
+    //         return;
+    //     }
+    //     else if (a < 0 && b < 0) {
+    //         alert(' Отрицательные: Первое число: ' + a + ' Второе число: ' + b + ' Результат: ' + (a * b));
+    //         return;
+    //     }
+    //     else if (a >= 0 && b < 0 || a < 0 && b >= 0) {
+    //         alert(' Разные: Первое число: ' + a + ' Второе число: ' + b + ' Результат: ' + (a + b));
+    //         return;
+    //     }
+    // }
+    // alert(isCompair(a, b));
+    //___________________________________________________________________________________________________________
+    /**
+     *
+     *  Это 4 задание.
+     *
+     * */
+    // var a = parseInt(Math.random() * 16 - 1);
+    // switch (a) {
+    //     case 0:
+    //         alert(0);
+    //     case 1:
+    //         alert(1);
+    //     case 2:
+    //         alert(2);
+    //     case 3:
+    //         alert(3);
+    //     case 4:
+    //         alert(4);
+    //     case 5:
+    //         alert(5);
+    //     case 6:
+    //         alert(6);
+    //     case 7:
+    //         alert(7);
+    //     case 8:
+    //         alert(8);
+    //     case 9:
+    //         alert(9);
+    //     case 10:
+    //         alert(10);
+    //     case 11:
+    //         alert(11);
+    //     case 12:
+    //         alert(12);
+    //     case 13:
+    //         alert(13);
+    //     case 14:
+    //         alert(14);
+    //     case 15:
+    //         alert(15);
+    // }
+    //
+    //___________________________________________________________________________________________________________
+    /**
+     *
+     * Это 5 задание
+     *
+     * */
+    // function sum(a, b) {
+    //     return a + b;
+    // }
+    // var res = 3 * sum(2, 3);
+    // alert(res);
+    // function difference(a, b) {
+    //     return a - b;
+    // }
+    // var res = 3 * difference(2, 3);
+    // alert(res);
+    // function divison(a, b) {
+    //  if(b != 0)
+    //     return a / b;
+    //  return 0;
+    // }
+    // var res = 3 * divison(2, 3);
+    // alert(res);
+    // function multiplication(a, b) {
+    //     return a - b;
+    // }
+    // var res = 3 * multiplication(2, 3);
+    // alert(res);
+    //___________________________________________________________________________________________________________
+    /**
+    *
+    * Это 6 задание
+    *
+    * */
+    // a = +promt("Введите первое число ");
+    // b = +promt("Введите второе число ");
+    // oper = +promt("Введите знак +, -, *, /");
+    // function matchOperation(a, b, oper) {
+    //     switch (oper) {
+    //         case "+":
+    //             alert(sum(a,b));
+    //             break;
+    //         case "-":
+    //             alert(difference(a,b));
+    //             break;
+    //         case "/":
+    //             alert(divison(a,b));
+    //             break;
+    //         case "*":
+    //             alert(multiplication(a,b));
+    //             break;
+    //          defult: 
+    //          alert("Введен неверный знак!");
+    //          break;
+    //     }
+    // }
+    // mathOperation(x,y,oper);
+    //___________________________________________________________________________________________________________
+    /**
+    *
+    * Это 7 задание
+    *
+    * */
+    // var x = 0;
+    // var y = null;
+    // alert(x == y); //false
+    // alert(x != 0); //true
+    // alert(x > null); // false
+    // alert(x >= null); // true
+    // alert(x < null); // false
+    // alert(x <= null); // true
+    //___________________________________________________________________________________________________________
+    /**
+    *
+    * Это 8 задание
+    *
+    * */
+    // var val = +promt("Введите число: ");
+    // var pow = +prompt("Введите степень числа: ");
+    // function power(val, pow) {
+    //     if (pow == 1) {
+    //         return val;
+    //     }
+    //     if (pow == 0){
+    //         return 1;    
+    //     }
+    //     if (pow > 0) {
+    //         return val * power(val, pow - 1);
+    //     }
+    // }
+    // alert(power(4, 3));
+    //___________________________________________________________________________________________________________
+</script>
+
+</html>
