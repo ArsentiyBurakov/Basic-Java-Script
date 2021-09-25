@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <title>Basket Shop</title>
+</head>
+
+<body>
+    <div class="container">
+        <section class="basket">
+            <h3 class="header-basket">Список продуктов к доставке:</h3>
+            <div class="basket-total">
+                <div class="card-basket" id="cb1">
+                    <img src="./shopimg/chicken.png" alt="Курица" class="image-basket">
+                    <p id="chicken-basket"></p>
+                </div>
+                <div class="card-basket" id="cb2">
+                    <img src="./shopimg/garlic.png" alt="Чеснок" class="image-basket">
+                    <p id="garlic-basket"></p>
+                </div>
+                <div class="card-basket" id="cb3">
+                    <img src="./shopimg/orange.png" alt="Апельсин" class="image-basket">
+                    <p id="orange-basket"></p>
+                </div>
+                <div class="card-basket" id="cb4">
+                    <img src="./shopimg/pizza.png" alt="Пицца" class="image-basket">
+                    <p id="pizza-basket"></p>
+                </div>
+                <div class="card-basket" id="cb5">
+                    <img src="./shopimg/potato.png" alt="Картофель" class="image-basket">
+                    <p id="potato-basket"></p>
+                </div>
+                <div class="card-basket" id="cb6">
+                    <img src="./shopimg/watermelon.png" alt="Арбуз" class="image-basket">
+                    <p id="watermelon-basket"></p>
+                </div>
+            </div>
+            <div class="basket-bottom" id="bb">
+                <h3>Итого к оплате:</h3>
+                <p id="bb-p"></p>
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="catalog-header">
+                <div class="card">
+                    <img src="./shopimg/chicken.png" alt="Курица" class="image">
+                    <h3 class="header-card">Курица</h3>
+                    <p class="p-card">Цена: <span class="card-price">298 руб/кг</span></p>
+                    <p id="chicken-p" class="p-card">Введите количество(шт):<br>
+                        <input type="number" id="chicken-number" min="0" value="0" class="card-input">
+                        <button id="b1" class="button-card">Добавить в корзину</button><br>
+                        <span class="card-red">Внимание! Одна курица весит от 1 до 4кг.</span>
+                    </p>
+                    <p id="alert-chicken" class="alert-none">Ошибка! Вы не выбрали количество!</p>
+                </div>
+                <div class="card">
+                    <img src="./shopimg/garlic.png" alt="Чеснок" class="image">
+                    <h3 class="header-card">Чеснок</h3>
+                    <p class="p-card">Цена за 100грамм: <span class="card-price">13,7 руб</span></p>
+                    <p id="garlic-p" class="p-card">Введите количество(гр):<br>
+                        <input type="number" id="garlic-number" min="0" value="0" class="card-input">
+                        <button id="b2" class="button-card">Добавить в корзину</button><br>
+                        <span class="card-red">Внимание! Вес указывается в граммах.</span>
+                    </p>
+                    <p id="alert-garlic" class="alert-none">Ошибка! Укажите вес!</p>
+                </div>
+                <div class="card">
+                    <img src="./shopimg/orange.png" alt="Апельсин" class="image">
+                    <h3 class="header-card">Апельсин</h3>
+                    <p class="p-card">Цена: <span class="card-price">90 руб/кг</span></p>
+                    <p id="orange-p" class="p-card">Введите количество(кг):<br>
+                        <input type="number" id="orange-number" min="0" value="0" class="card-input">
+                        <button id="b3" class="button-card">Добавить в корзину</button>
+                    </p>
+                    <p id="alert-orange" class="alert-none">Ошибка! Укажите вес!</p>
+                </div>
+                <div class="card">
+                    <img src="./shopimg/pizza.png" alt="Пицца" class="image">
+                    <h3 class="header-card">Пицца</h3>
+                    <p class="p-card">Цена: <span class="card-price">550 руб</span></p>
+                    <p id="pizza-p" class="p-card">Выберите количество(шт):<br>
+                        <input type="number" id="pizza-number" min="0" value="0" class="card-input">
+                        <button id="b4" class="button-card">Добавить в корзину</button>
+                    </p>
+                    <p id="alert-pizza" class="alert-none">Ошибка! Вы не выбрали количество!</p>
+                </div>
+                <div class="card">
+                    <img src="./shopimg/potato.png" alt="Картофель" class="image">
+                    <h3 class="header-card">Картофель</h3>
+                    <p class="p-card">Цена: <span class="card-price">48 руб/кг</span></p>
+                    <p id="potato-p" class="p-card">Выберите количество(кг):<br>
+                        <input type="number" id="potato-number" min="0" value="0" class="card-input">
+                        <button id="b5" class="button-card">Добавить в корзину</button>
+                    </p>
+                    <p id="alert-potato" class="alert-none">Ошибка! Укажите вес!</p>
+                </div>
+                <div class="card">
+                    <img src="./shopimg/watermelon.png" alt="Арбуз" class="image">
+                    <h3 class="header-card">Арбуз</h3>
+                    <p class="p-card">Цена: <span class="card-price">25 руб/кг</span></p>
+                    <p id="watermelon-p" class="p-card">Выберите количество(шт):<br>
+                        <input type="number" id="watermelon-number" min="0" value="0" class="card-input">
+                        <button id="b5" class="button-card">Добавить в корзину</button><br>
+                        <span class="card-red">Внимание! Однин арбуз весит от 3 до 10кг.</span>
+                    </p>
+                    <p id="alert-watermelon" class="alert-none">Ошибка! Вы не выбрали количество!</p>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <script>
+
+        var buttons = document.querySelectorAll("button");
+
+        var chikenOnTrue = false;
+        var garlikOnTrue = false;
+        var orangeOnTrue = false;
+        var pizzaOnTrue = false;
+        var potatoOnTrue = false;
+        var watermelonOnTrue = false;
+
+        var generalWeightChicken = 0;
+        var generalWeightWatermelon = 0;
+
+        var resultChicken = 0;
+        var resultGarlic = 0;
+        var resultOrange = 0;
+        var resultPizza = 0;
+        var resultPotato = 0;
+        var resultWatermelon = 0;
+
+        var chikenPrice = 298;
+        var garlikPrice = 137 / 100;
+        var orangePrice = 90;
+        var pizzaPrice = 550;
+        var potatoPrice = 48;
+        var watermelonPrice = 25;
+
+        let totalPrice = 0;
+
+        buttons[0].addEventListener("click", chickenCalc);
+        buttons[1].addEventListener("click", garlikCalc);
+        buttons[2].addEventListener("click", orangeCalc);
+        buttons[3].addEventListener("click", pizzaCalc);
+        buttons[4].addEventListener("click", potatoCalc);
+        buttons[5].addEventListener("click", watermelonCalc);
+
+        function chickenCalc() {
+            var numChicken = document.getElementById("chicken-number").value;
+            if (chikenOnTrue != true) {
+                if (numChicken > 0) {
+                    for (var i = 1; i <= numChicken; i++) {
+                        var weightСhicken = Math.random() * 4 + 1;
+                        generalWeightChicken += weightСhicken;
+                    }
+                    resultChicken = generalWeightChicken * chikenPrice;
+                    chikenOnTrue = false;
+                    document.getElementById("chicken-p").innerHTML = "<p class='card-successfully'> Товар успешно добавлен в корзину</p><p class='card-successfully-span'>Перейдите в корзину чтобы оформить заказ.";
+                    document.getElementById("alert-chicken").style.display = "none";
+                    document.getElementById("chicken-basket").innerHTML = "Курица<br>Количество: " + numChicken + "шт<br>Общий вес: " + generalWeightChicken.toFixed(3) + "кг<br>Общая стоимость:" + resultChicken.toFixed(2) + "руб.";
+                    document.getElementById("cb1").style.display = "block";
+                    document.getElementById("bb").style.display = "block";
+                    totalPrice += resultChicken;
+                    document.getElementById("bb-p").innerHTML = "<span class='red'>" + totalPrice.toFixed(2) + "руб.</span>";
+                }
+                else {
+                    document.getElementById("alert-chicken").style.display = "block";
+                }
+            }
+
+        }
+        function garlikCalc() {
+            var numGarlic = document.getElementById("garlic-number").value;
+            if (garlikOnTrue != true) {
+                if (numGarlic > 0) {
+                    resultGarlic = numGarlic * garlikPrice;
+                    garlikOnTrue = false;
+                    document.getElementById("garlic-p").innerHTML = "<p class='card-successfully'> Товар успешно добавлен в корзину</p><p class='card-successfully-span'>Перейдите в корзину чтобы оформить заказ.";
+                    //document.getElementById("garlic-p").innerHTML = "<p>В корзину добавлено: " + numGarlic + "гр." + "</p><p>Стоимость: " + resultGarlic + "руб.";
+                    document.getElementById("alert-garlic").style.display = "none";
+                    document.getElementById("cb2").style.display = "block";
+                    document.getElementById("bb").style.display = "block";
+                    document.getElementById("garlic-basket").innerHTML = "Чеснок<br>Общий вес: " + numGarlic + "гр<br>Общая стоимость: " + resultGarlic.toFixed(2) + "руб.";
+                    totalPrice += resultGarlic;
+                    document.getElementById("bb-p").innerHTML = "<span class='red'>" + totalPrice.toFixed(2) + "руб.</span>";
+                }
+                else {
+                    document.getElementById("alert-garlic").style.display = "block";
+                }
+            }
+        }
+        function orangeCalc() {
+            var numOrange = document.getElementById("orange-number").value;
+            if (orangeOnTrue != true) {
+                if (numOrange > 0) {
+                    resultOrange = numOrange * orangePrice;
+                    orangeOnTrue = false;
+                    document.getElementById("orange-p").innerHTML = "<p class='card-successfully'> Товар успешно добавлен в корзину</p><p class='card-successfully-span'>Перейдите в корзину чтобы оформить заказ.";
+                    //document.getElementById("orange-p").innerHTML = "<p>В корзину добавлено: " + numOrange + "кг." + "</p><p>Стоимость: " + resultOrange + "руб.";
+                    document.getElementById("alert-orange").style.display = "none";
+                    document.getElementById("cb3").style.display = "block";
+                    document.getElementById("orange-basket").innerHTML = "Апельсин<br>Общий вес: " + numOrange + "кг<br>Общая стоимость: " + resultOrange + "руб.";
+                    document.getElementById("bb").style.display = "block";
+                    totalPrice += resultOrange;
+                    document.getElementById("bb-p").innerHTML = "<span class='red'>" + totalPrice.toFixed(2) + "руб.</span>";
+                }
+                else {
+                    document.getElementById("alert-orange").style.display = "block";
+                }
+            }
+        }
+        function pizzaCalc() {
+            var numPizza = document.getElementById("pizza-number").value;
+            if (pizzaOnTrue != true) {
+                if (numPizza > 0) {
+                    resultPizza = numPizza * pizzaPrice;
+                    pizzaOnTrue = false;
+                    document.getElementById("pizza-p").innerHTML = "<p class='card-successfully'> Товар успешно добавлен в корзину</p><p class='card-successfully-span'>Перейдите в корзину чтобы оформить заказ.";
+                    document.getElementById("alert-pizza").style.display = "none";
+                    document.getElementById("cb4").style.display = "block";
+                    document.getElementById("pizza-basket").innerHTML = "Пицца<br>Количество: " + numPizza + "кг<br>Общая стоимость: " + resultPizza + "руб.";
+                    document.getElementById("bb").style.display = "block";
+                    totalPrice += resultPizza;
+                    document.getElementById("bb-p").innerHTML = "<span class='red'>" + totalPrice.toFixed(2) + "руб.</span>";
+                }
+                else {
+                    document.getElementById("alert-pizza").style.display = "block";
+                }
+            }
+        }
+        function potatoCalc() {
+            var numPotato = document.getElementById("potato-number").value;
+            if (potatoOnTrue != true) {
+                if (numPotato > 0) {
+                    resultPotato = numPotato * potatoPrice;
+                    potatoOnTrue = false;
+                    document.getElementById("potato-p").innerHTML = "<p class='card-successfully'> Товар успешно добавлен в корзину</p><p class='card-successfully-span'>Перейдите в корзину чтобы оформить заказ.";
+                    document.getElementById("alert-potato").style.display = "none";
+                    document.getElementById("cb5").style.display = "block";
+                    document.getElementById("potato-basket").innerHTML = "Картофель<br>Общий вес: " + numPotato + "кг<br>Общая стоимость: " + resultPotato + "руб.";
+                    document.getElementById("bb").style.display = "block";
+                    totalPrice += resultPotato;
+                    document.getElementById("bb-p").innerHTML = "<span class='red'>" + totalPrice.toFixed(2) + "руб.</span>";
+                }
+                else {
+                    document.getElementById("alert-potato").style.display = "block";
+                }
+            }
+        }
+        function watermelonCalc() {
+            var numWatermelon = document.getElementById("watermelon-number").value;
+            if (watermelonOnTrue != true) {
+                if (numWatermelon > 0) {
+                    for (var i = 1; i <= numWatermelon; i++) {
+                        var weightWatermelon = Math.random() * 10 + 3;
+                        generalWeightWatermelon += weightWatermelon;
+                    }
+                    resultWatermelon = generalWeightWatermelon * watermelonPrice;
+                    watermelonOnTrue = false;
+                    document.getElementById("watermelon-p").innerHTML = "<p class='card-successfully'> Товар успешно добавлен в корзину</p><p class='card-successfully-span'>Перейдите в корзину чтобы оформить заказ.";
+                    document.getElementById("alert-watermelon").style.display = "none";
+                    document.getElementById("cb6").style.display = "block";
+                    document.getElementById("bb").style.display = "block";
+                    totalPrice += resultWatermelon;
+                    document.getElementById("bb-p").innerHTML = "<span class='red'>" + totalPrice.toFixed(2) + "руб.</span>";
+                    document.getElementById("watermelon-basket").innerHTML = "Арбуз<br>Общее кол-во: " + numWatermelon + "шт<br>Общий вес: " + generalWeightWatermelon.toFixed(2) + "кг<br>Общая стоимость: " + resultWatermelon.toFixed(2) + "руб.";
+                }
+                else {
+                    document.getElementById("alert-watermelon").style.display = "block";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
