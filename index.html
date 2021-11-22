@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="site">
+        <div class="container">
+            <h1 class="header">Basic Java-Script</h1>
+            <h2 class="heading">Language basics Java-Script</h2>
+            <div class="box">
+                <p class="p-item">1. Задать температуру в градусах по Цельсию. Вывести в alert соответствующую
+                    температуру в
+                    градусах по
+                    Фаренгейту.<br>
+                    Подсказка: расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, Tc –
+                    температура
+                    по
+                    Цельсию
+                </p>
+                <p class="p-solution">
+                    var Tc = 30;<br>
+                    var Tf = (9 / 5) * Tc + 32;<br>
+                    alert(Tf);<br>
+                    <span class="span-result">Alert result: 86</span>
+                </p>
+            </div>
+            <div class="box">
+                <p class="p-item">
+                    2. Объявить две переменные: admin и name. Записать в name строку "Василий";<br> Скопировать значение
+                    из
+                    name
+                    в admin. Вывести admin (должно вывести «Василий»).
+                </p>
+                <p class="p-solution">
+                    var name = "Василий";<br>
+                    var admin = name;<br>
+                    alert(admin);<br>
+                    <span class="span-result">Alert result: Василий</span>
+                </p>
+            </div>
+            <div class="box">
+                <p class="p-item">
+                    3. Чему будет равно JS-выражение 1000 + "108".
+                </p>
+                <p class="p-solution">
+                    var a = 1000;<br>
+                    var b = "108";<br>
+                    alert(a + b);<br>
+                    <span class="span-result">Alert result: 1000108</span>
+                </p>
+            </div>
+            <div class="box">
+                <p class="p-item">
+                    5. Самостоятельно разобраться с атрибутами тега script (async и defer).
+                </p>
+                <p class="p-solution">
+                    Атрибут async: <span class="span-result">загружает скрипт асинхронно, т.е. параллельно друг другу.</span><br>
+                    Атрибут defer: <span class="span-result">последовательная загрузка скриптов после загрузки шаблона сайта.</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var a = 1000;
+        var b = "108";
+        var Tc = 30;
+        var Tf = (9 / 5) * Tc + 32;
+        var name = "Василий";
+        var admin = name;
+        alert(' 1.Температура: ' + (Tf) + ' 2.Admin: ' + (admin) + ' 3.JS-выражение: ' + (a + b));
+    </script>
+
+</body>
+
+</html>
